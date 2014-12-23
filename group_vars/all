@@ -1,0 +1,23 @@
+---
+# apache
+httpd_port: 80
+
+# java
+java_type: 'sun'
+java_version: '8u25'
+java_build: 'b17'
+
+# tomcat
+tomcat_version: '8.0.15'
+tomcat_server_port: 8080
+tomcat_server_shutdown_port: 8005 
+tomcat_server_ssl_port: 8443 
+tomcat_server_ajp_port: 8009 
+java_opts: '-Xms1G -Xmx2G -Xss1024k -XX:MaxPermSize=256m -Dcom.sun.management.jmxremote'
+
+# nodejs
+nodejs_forever: true
+
+# mongo
+dbpath: /var/lib/mongo
+

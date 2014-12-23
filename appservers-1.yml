@@ -1,0 +1,11 @@
+---
+# file: appservers.yml
+- hosts: appservers-1
+  remote_user: rkarna
+  sudo: yes
+  roles:
+      - common
+#      - { role: openjdk, when "java_type == 'open'"}
+      - { role: java, when: "java_type == 'sun'"}
+      - tomcat
+      - { role: geerlingguy.elasticsearch }

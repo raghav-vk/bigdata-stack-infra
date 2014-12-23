@@ -1,0 +1,9 @@
+---
+# file: appservers.yml
+- hosts: appservers-2
+  remote_user: rkarna
+  sudo: yes
+  roles:
+      - common
+      - nodejs
+      - mongodb

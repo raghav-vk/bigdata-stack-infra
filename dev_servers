@@ -1,0 +1,25 @@
+# file: dev
+
+[webservers]
+10.128.108.82	#beacon-dev-web	
+
+[appservers-1]
+10.128.108.90	#beacon-dev-app-1	 
+
+[appservers-2]
+10.128.108.91	#beacon-dev-app-2
+
+# webservers in all geos
+[webservers:children]
+
+# appservers in all types
+[appservers:children]
+
+# dataservers in all geos
+[dataservers:children]
+
+# everything in the atlanta geo
+[atlanta:children]
+
+# everything in the boston geo
+[boston:children]

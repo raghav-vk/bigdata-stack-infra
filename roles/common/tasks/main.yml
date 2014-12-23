@@ -1,0 +1,33 @@
+---
+- name: Add epel repo for byobu
+  yum: name=http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm state=present
+  register: epel_installed
+
+- name: Add basic packages
+  yum: state=latest name={{ item }}
+  with_items:
+    - wget
+    - unzip
+    - libselinux-python
+    - python-psycopg2
+    - MySQL-python
+    - vim
+    - byobu
+    - htop
+  when: epel_installed|changed
+
+- name: Install ntp
+  yum: name=ntp state=present
+  tags: ntp
+  when: epel_installed|changed
+
+- name: Start the ntp service
+  service: name=ntpd state=started enabled=true
+  tags: ntp
+  when: epel_installed|changed
+
+- name: test to see if selinux is running
+  command: getenforce
+  register: sestatus
+  changed_when: false
+
