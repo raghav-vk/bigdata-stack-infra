@@ -1,0 +1,28 @@
+# file: prod
+
+[webservers]
+10.144.32.20	#beacon-black-web	
+
+[appservers-1]
+10.144.32.21	#beacon-black-app-1	 
+
+[appservers-2]
+10.144.32.22	#beacon-black-app-2
+
+[dataservers]
+10.144.32.23	#beacon-black-db
+
+# webservers in all geos
+[webservers:children]
+
+# appservers in all types
+[appservers:children]
+
+# dataservers in all geos
+[dataservers:children]
+
+# everything in the atlanta geo
+[atlanta:children]
+
+# everything in the boston geo
+[boston:children]

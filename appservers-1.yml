@@ -8,4 +8,4 @@
 #      - { role: openjdk, when "java_type == 'open'"}
       - { role: java, when: "java_type == 'sun'"}
       - tomcat
-      - { role: geerlingguy.elasticsearch }
+      - { role: elasticsearch }
