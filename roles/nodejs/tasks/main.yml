@@ -5,4 +5,4 @@
 
 - name: Install global packages
   npm: global=yes name={{ item }} state=present
-#  with_items: nodejs_global_packages
+  with_items: nodejs_global_packages

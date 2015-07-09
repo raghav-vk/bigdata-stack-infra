@@ -1,8 +1,8 @@
-- name: deploy MySQL and configure the databases
+- name: deploy oracle-client and configure the databases
   hosts: dataservers
-  remote_user: rkarna
+  remote_user: "{{ ansible_ssh_user }}"
   sudo: yes
   roles:
     - common
-    - oracle-client
+    - nodejs
 

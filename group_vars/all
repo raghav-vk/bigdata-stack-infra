@@ -5,7 +5,7 @@ httpd_port: 80
 # java
 java_type: 'sun'
 java_version: '8u45'
-java_build: 'b17'
+java_build: 'b14'
 
 # tomcat
 tomcat_version: '8.0.23'

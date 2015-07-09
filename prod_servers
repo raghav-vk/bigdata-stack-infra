@@ -21,8 +21,9 @@
 # dataservers in all geos
 [dataservers:children]
 
-# everything in the atlanta geo
-[atlanta:children]
+# everything in the ashburn geo
+[ashburm:children]
 
-# everything in the boston geo
-[boston:children]
+# everything in the nbp geo
+[nbp:children]
+

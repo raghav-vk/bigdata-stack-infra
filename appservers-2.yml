@@ -1,9 +1,9 @@
 ---
 # file: appservers.yml
 - hosts: appservers-2
-  remote_user: rkarna
+  remote_user: "{{ ansible_ssh_user }}"
   sudo: yes
   roles:
       - common
-      - nodejs
+      - geerlingguy.nodejs
       - mongodb

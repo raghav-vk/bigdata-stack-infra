@@ -1,7 +1,7 @@
 ---
 # file: webservers.yml
 - hosts: webservers
-  remote_user: rkarna
+  remote_user: "{{ ansible_ssh_user }}"
   sudo: yes
   roles:
     - common
