@@ -7,6 +7,6 @@
     - common
     - { role: java, when: "java_type == 'sun'"}
     - tomcat
-    - { role: elasticsearch }
+    - { role: geerlingguy.elasticsearch }
     - geerlingguy.nodejs
     - mongodb
