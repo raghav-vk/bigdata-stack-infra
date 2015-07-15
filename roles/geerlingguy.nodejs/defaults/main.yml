@@ -1,2 +1,2 @@
 ---
-# defaults file for geerlingguy.nodejs
+nodejs_forever: true
